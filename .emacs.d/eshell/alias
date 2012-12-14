@@ -1,0 +1,11 @@
+alias ll ls -l -h
+alias la ls -a
+alias lla ls -a -l
+alias g git
+alias l lein
+alias s ssh
+alias gst git status
+alias gbv git branch -v
+alias gb git branch
+alias gco git checkout
+alias glt git log -n 10

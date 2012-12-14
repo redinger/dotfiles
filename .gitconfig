@@ -1,0 +1,63 @@
+[user]
+    initials = cr
+	name = Christopher Redinger
+	email = redinger@gmail.com
+[alias]
+  ci = commit
+  co = checkout
+  st = status
+  br = branch
+  di = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+  # show difference between the HEAD and the index
+  staged = diff --cached
+
+  # show difference between working tree and the index
+  unstaged = diff
+
+  # show staged and unstaged changes (what would be committed with "git commit -a")
+  both = diff HEAD
+
+  ribbon = tag --force _ribbon origin/master
+  catchup = log --patch --reverse --topo-order _ribbon..origin/master
+
+[push]
+  default = tracking
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[core]
+  excludesfile = $HOME/.gitignore
+
+[github]
+  user = redinger
+
+[diff "ruby"]
+  funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
+
+[diff "clojure"]
+  xfuncname = "^\\(.*"
+
+[branch]
+  autosetuprebase = remote
+[heroku]
+  account = redinger
+[credential]
+  helper = osxkeychain
