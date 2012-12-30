@@ -8,7 +8,7 @@
      (define-key magit-log-mode-map (kbd "A")
        (lambda ()
          (interactive)
-         (flet ((magit-need-refresh (f)))
+         (cl-flet ((magit-need-refresh (f)))
            (magit-cherry-pick-item))))))
 
 (add-to-list 'load-path "~/.emacs.d/elpa/color-theme-twilight-0.1")

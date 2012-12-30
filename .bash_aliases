@@ -24,3 +24,5 @@ alias gco="git checkout"
 alias glt="git log -n 10"
 
 alias be="bundle exec"
+
+alias datomic-free=$HOME/.datomic-free/bin/datomic-free
