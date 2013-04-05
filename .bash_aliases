@@ -1,7 +1,9 @@
 alias ls="ls -G"
 
 alias emacs="open -a /Applications/Emacs.app/"
-alias e="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
+alias emacsclient=e
+alias eterm="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 alias ll="ls -lh"
 alias la="ls -a"

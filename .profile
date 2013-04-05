@@ -1,6 +1,6 @@
 export PATH=/usr/local/bin:$PATH:$ETC_PATH/scripts:/usr/local/sbin:~/.cljr/bin:~/.lein/bin:~/bin:~/node_modules/.bin
-export EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
-export GIT_EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+export EDITOR='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n'
+export GIT_EDITOR='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n'
 
 export CDPATH=.:$HOME/src
 export PAGER=less

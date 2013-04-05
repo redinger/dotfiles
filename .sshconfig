@@ -1,5 +1,6 @@
 Host agiledisciple.com
-  User root
+  User redinger
+  Port 1701
 
 Host heroku.redinger
   HostName heroku.com
@@ -10,14 +11,6 @@ Host heroku.chris
   HostName heroku.com
   IdentityFile ~/.ssh/identity
   IdentitiesOnly yes
-
-Host stulb
-  HostName 192.168.2.157
-  User stu
-
-Host lbdell
-  HostName 192.168.1.67
-  User redinger
 
 Host *
   KeepAlive yes

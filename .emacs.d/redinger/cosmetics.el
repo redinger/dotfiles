@@ -89,4 +89,3 @@
 (setq completion-ignore-case 1)
 (setq show-trailing-whitespace t)
 (set-default 'fill-column 80)
-

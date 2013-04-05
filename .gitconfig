@@ -1,14 +1,24 @@
 [user]
     initials = cr
-	name = Christopher Redinger
+	name = Chris Redinger
 	email = redinger@gmail.com
+[core]
+  excludesfile = $HOME/.gitignore
+  editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
+
 [alias]
   ci = commit
   co = checkout
   st = status
   br = branch
   di = diff
+  lp = log -p
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  # show files ignored by git
+  ign = ls-files -o -i --exclude-standard
 
   # show difference between the HEAD and the index
   staged = diff --cached
@@ -29,6 +39,7 @@
   diff = auto
   interactive = auto
   status = auto
+  ui = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -42,9 +53,6 @@
   added = yellow
   changed = green
   untracked = cyan
-
-[core]
-  excludesfile = $HOME/.gitignore
 
 [github]
   user = redinger
@@ -61,3 +69,18 @@
   account = redinger
 [credential]
   helper = osxkeychain
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+  insteadOf = "github:"
+[url "git@gist.github.com:"]
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+  insteadOf = "gist:"
+[url "git@heroku.com:"]
+  insteadOf = "heroku:"
