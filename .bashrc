@@ -94,5 +94,6 @@ export CC=/usr/bin/gcc
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 
+HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
-PROMPT_COMMAND='history -a'
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"

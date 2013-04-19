@@ -4,6 +4,7 @@
       '("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default))
 
 (global-hl-line-mode 1)
+(global-linum-mode 1)
 
 (defun inconsolata (size)
   (interactive "p")
