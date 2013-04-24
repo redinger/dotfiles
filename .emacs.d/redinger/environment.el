@@ -25,3 +25,4 @@
 (setq user-mail-address "redinger@gmail.com")
 
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
+(setq ffap-machine-p-known 'reject)

@@ -28,10 +28,10 @@
 (set-face-background 'vertical-border "white")
 
 (defun zb ()
-  (load-theme 'zenburn))
+  (load-theme 'zenburn t))
 
 (defun tw ()
-    (load-theme 'twilight))
+    (load-theme 'twilight t))
 
 (defun bb ()
   "Black for use with glasstty in -nw"
