@@ -19,3 +19,8 @@
 
 (global-set-key (kbd "C-S-n") 'other-window)
 (global-set-key (kbd "C-S-p") (lambda () (interactive) (other-window -1)))
+
+(global-set-key (kbd "C-S-h") 'windmove-left)
+(global-set-key (kbd "C-S-j") 'windmove-down)
+(global-set-key (kbd "C-S-k") 'windmove-up)
+(global-set-key (kbd "C-S-l") 'windmove-right)
