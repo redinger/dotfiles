@@ -16,3 +16,6 @@
 (global-set-key (kbd "C-x C-y") 'copy-region-as-kill)
 
 (global-set-key (kbd "M-l") 'longlines-mode)
+
+(global-set-key (kbd "C-S-n") 'other-window)
+(global-set-key (kbd "C-S-p") (lambda () (interactive) (other-window -1)))

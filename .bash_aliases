@@ -28,3 +28,5 @@ alias glt="git log -n 10"
 alias be="bundle exec"
 
 alias datomic-free=$HOME/.datomic-free/bin/datomic-free
+
+alias sourcecode="truecrypt -t -k '' --protect-hidden=no $HOME/sourcecode.tc $HOME/src"
