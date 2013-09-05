@@ -54,10 +54,6 @@ if [ -f $ETC_PATH/bash/ssh_autocompletion.sh ]; then
     . $ETC_PATH/bash/ssh_autocompletion.sh
 fi
 
-if [ -f $ETC_PATH/bash/rake_autocompletion.rb ]; then
-    $ETC_PATH/bash/rake_autocompletion.rb
-fi
-
 if [ -f $ETC_PATH/bash/reagent.sh ]; then
     . $ETC_PATH/bash/reagent.sh
 fi
@@ -88,12 +84,7 @@ fi
 
 export CC=/usr/bin/gcc
 
-[[ -s "/Users/redinger/.rvm/scripts/rvm" ]] && source "/Users/redinger/.rvm/scripts/rvm"
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-
 HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+export JAVA_CMD=/usr/bin/java

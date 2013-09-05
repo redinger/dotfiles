@@ -15,5 +15,8 @@ auto-save-list
 /.emacs.d/tramp
 /.emacs.d/url
 .lein-plugins/
+/.lein-repl-history
 .powrc
 repl-port
+.lein-repl-history
+.nrepl-port

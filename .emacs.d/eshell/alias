@@ -1,11 +1,19 @@
-alias ll ls -l -h
-alias la ls -a
-alias lla ls -a -l
-alias g git
-alias l lein
-alias s ssh
+alias rtags ctags-exuberant -e --Ruby-kinds=-fFcm -o TAGS -R $*
+alias s ssh $*
+alias r rgrep $*
+alias l ls $*
+alias g git $*
+alias f find $*
+alias c curl $*
+alias emacs find-file $1
+alias lh ls -l -h $*
+alias ll ls -l $*
+alias la ls -a $*
 alias gst git status
-alias gbv git branch -v
-alias gb git branch
-alias gco git checkout
+alias gb git branch $*
+alias gbv git branch -v $*
+alias gco git checkout $*
 alias glt git log -n 10
+alias gsu git submodule update --init --recursive
+alias be bundle exec $*
+alias gdum git commit --allow-empty -m dummy

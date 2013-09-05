@@ -1,6 +1,13 @@
 (setq-default save-place t)
 
-(setq ido-handle-duplicate-virtual-buffers 2)
+(setq custom-file (expand-file-name "~/.emacs.d/custom.el")
+      ido-handle-duplicate-virtual-buffers 2
+      org-default-notes-file "~/src/redinger-dotfiles/.notes.org"
+      org-completion-use-ido t
+      epa-armor t
+      inhibit-startup-message t)
+      ido-use-virtual-buffers t
+
 (setq custom-file (expand-file-name "~/.emacs.d/custom.el"))
 
 (setq auto-save-default nil)
@@ -9,6 +16,8 @@
 (setq tab-always-indent t)
 (set-language-environment "UTF-8")
 (setq slime-net-coding-system 'utf-8-unix)
+
+(column-number-mode t)
 
 (delete-selection-mode t)
 

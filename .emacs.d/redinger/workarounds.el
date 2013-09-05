@@ -11,23 +11,20 @@
          (cl-flet ((magit-need-refresh (f)))
            (magit-cherry-pick-item))))))
 
-(add-to-list 'load-path "~/.emacs.d/elpa/color-theme-twilight-0.1")
-(autoload 'color-theme-twilight "color-theme-twilight" nil t)
-
 (autoload 'marmalade-upload-buffer "marmalade" nil t)
 
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+(require 'parenface-plus)
 
 (autoload 'yaml-mode "yaml-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 (setq-default ispell-program-name "aspell")
 
+(defalias 'byte-compile-cl-warn 'identity)
+
 (setq org-export-with-toc nil)
 
-(add-hook 'eshell-mode-hook
-          '(lambda () (fmakunbound 'eshell/sudo)
-             (fmakunbound 'eshell/su)))
-
 (setq dired-use-ls-dired nil)
+
