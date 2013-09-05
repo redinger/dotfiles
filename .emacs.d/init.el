@@ -53,3 +53,4 @@
 (with-current-buffer "*eshell*" (setq pcomplete-cycle-completions nil))
 (set-face-foreground 'eshell-prompt "turquoise")
 
+(server-start)
