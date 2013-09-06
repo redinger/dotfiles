@@ -1,3 +1,5 @@
+(setq ns-function-modifier 'hyper) ; set Mac's Fn key to type Hyper
+
 (global-set-key (kbd "C-c C-j") 'nrepl-jack-in)
 
 (global-set-key (kbd "C-c f") 'find-file-in-project)
@@ -38,6 +40,8 @@
 
 (global-set-key (kbd "M-l") 'longlines-mode)
 
+
+;; Lots of experimental ways to move around windows...not sure which I like yet
 (global-set-key (kbd "C-S-n") 'other-window)
 (global-set-key (kbd "C-S-p") (lambda () (interactive) (other-window -1)))
 
@@ -45,3 +49,10 @@
 (global-set-key (kbd "C-S-j") 'windmove-down)
 (global-set-key (kbd "C-S-k") 'windmove-up)
 (global-set-key (kbd "C-S-l") 'windmove-right)
+
+(windmove-default-keybindings)
+
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <left>") 'windmove-left)

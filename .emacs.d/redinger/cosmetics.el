@@ -17,7 +17,7 @@
   (set-default-font
    (concat "-unknown-Inconsolata-normal-normal-normal-*-"
            (if (stringp size) size
-             (if (= 1 size) "18"
+             (if (= 1 size) "16"
                (read-from-minibuffer "Size: ")))
            "-*-*-*-m-0-*-*")))
 
