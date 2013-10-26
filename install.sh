@@ -26,7 +26,7 @@ link_with_backup .tmux.conf
 
 mkdir -p $HOME/.ssh
 if [ ! -r "$HOME/.ssh/config" ]; then
-  ln -s "$HOME/.dotfiles/.sshconfig" "$HOME/.ssh/config"
+  ln -s "$HOME/src/dotfiles/.sshconfig" "$HOME/.ssh/config"
 fi
 
 echo "Remember to rename the .emacs.d/redinger folder if you are not redinger"
