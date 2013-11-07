@@ -3,7 +3,7 @@
 	name = Chris Redinger
 	email = redinger@gmail.com
 [core]
-  excludesfile = $HOME/.gitignore
+  excludesfile = /Users/redinger/.gitignore_global
   editor = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
 
 [alias]

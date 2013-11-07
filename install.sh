@@ -18,6 +18,7 @@ link_with_backup .clj_completions
 link_with_backup .emacs.d
 link_with_backup .gemrc
 link_with_backup .gitconfig
+link_with_backup .gitignore_global
 link_with_backup .inputrc
 link_with_backup .irbrc
 link_with_backup .profile
