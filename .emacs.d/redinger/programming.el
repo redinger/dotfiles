@@ -6,6 +6,9 @@
                              nil `(("\\<\\(FIX\\(ME\\)?\\|TODO\\)"
                                     1 font-lock-warning-face t)))))
 
+(setq inferior-lisp-program "bin/repl"
+      clojure-inf-lisp-command "bin/repl"
+      whitespace-style '(face trailing empty tabs))
 
 (when (<= (display-color-cells) 8)
   (defun hl-line-mode () (interactive)))
@@ -20,21 +23,22 @@
 
 (put 'clojure-test-ns-segment-position 'safe-local-variable 'integerp)
 (put 'clojure-mode-load-command 'safe-local-variable 'stringp)
-(put 'clojure-swank-command 'safe-local-variable 'stringp)
-
-(add-hook 'nrepl-connected-hook
-          (defun pnh-clojure-mode-eldoc-hook ()
-            (add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)))
-
-(setq clojure-swank-command "lein jack-in %s"
-      inferior-lisp-command "lein repl"
-      whitespace-style '(face trailing lines-tail tabs))
 
 (add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'elisp-slime-nav-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
+
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'subword-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
+
+(setq nrepl-hide-special-buffers t)
+(setq cider-repl-print-length 100) ; the default is nil, no limit
 
 (define-key emacs-lisp-mode-map (kbd "C-c v") 'eval-buffer)
 

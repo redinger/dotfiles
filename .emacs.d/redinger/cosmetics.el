@@ -42,7 +42,8 @@
   (eval-after-load 'magit
     '(progn (set-face-background 'magit-item-highlight "black")
             (set-face-background 'diff-refine-change "grey10")))
-  (set-face-foreground 'eshell-prompt "turquoise"))
+  ;; (set-face-foreground 'eshell-prompt "turquoise")
+  )
 
 (defun tw ()
   (interactive)
@@ -52,7 +53,7 @@
   (set-face-background 'vertical-border "black")
   (set-face-foreground 'vertical-border "black")
   (require 'hl-line)
-  (set-face-foreground 'eshell-prompt "turquoise1")
+  ;;(set-face-foreground 'eshell-prompt "turquoise1")
   (eval-after-load 'magit
     '(progn (set-face-background 'magit-item-highlight "black")
             (set-face-background 'diff-refine-change "grey10")))
@@ -66,7 +67,7 @@
   (set-face-background 'vertical-border "black")
   (set-face-foreground 'vertical-border "black")
   (require 'hl-line)
-  (set-face-foreground 'eshell-prompt "turquoise1")
+;;  (set-face-foreground 'eshell-prompt "turquoise1")
   (set-face-background 'hl-line "black")
   (eval-after-load 'diff-mode
     '(set-face-background 'diff-refine-change "gray18"))
@@ -174,6 +175,7 @@
 (setq completion-ignore-case 1)
 (setq show-trailing-whitespace t)
 (set-default 'fill-column 80)
+(setq split-height-threshold nil)
 
 (zb)
 (inconsolata 1)

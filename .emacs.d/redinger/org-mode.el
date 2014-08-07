@@ -52,3 +52,9 @@
 (setq org-mobile-inbox-for-pull "~/org/flagged.org")
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 
+
+(add-to-list 'load-path "/Users/redinger/src/org-mode/lisp")
+(add-to-list 'load-path "/Users/redinger/src/org-mode/contrib/lisp" t)
+(require 'ox-confluence)
+
+(setq org-startup-indented t)

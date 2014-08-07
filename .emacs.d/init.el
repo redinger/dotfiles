@@ -4,26 +4,29 @@
   (require 'package "package-23.el"))
 
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (package-initialize)
 
 (when (null package-archive-contents)
   (package-refresh-contents))
 
 (defvar my-packages '(better-defaults
-                      clojure-mode
-                      clojure-test-mode
+                      cider
                       paredit
                       idle-highlight-mode
                       find-file-in-project
                       magit
                       elisp-slime-nav
-                      parenface-plus
+                      ;;parenface-plus
+                      parenface
                       markdown-mode
                       yaml-mode
                       diminish
                       smex
-                      ;;; ido-hacks
+                      ido-hacks
+                      rainbow-delimiters
+                      exec-path-from-shell
                       ;;; color-theme
                       ;;; zenburn-theme
                       ;;; twilight-theme
@@ -42,6 +45,9 @@
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 (smex-initialize)
 
+(require 'ido-hacks)
+(ido-hacks-mode)
+
 (global-set-key (kbd "M-x") 'smex)
 
 (global-set-key (kbd "C-c r") 'org-capture)
@@ -51,6 +57,6 @@
 (eshell)
 
 (with-current-buffer "*eshell*" (setq pcomplete-cycle-completions nil))
-(set-face-foreground 'eshell-prompt "turquoise")
+;; (set-face-foreground 'eshell-prompt "turquoise")
 
 (server-start)

@@ -31,6 +31,9 @@
     (add-to-list 'exec-path "/usr/local/bin")
     (setq ispell-program-name "aspell")))
 
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 (setq user-mail-address "redinger@gmail.com")
 
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)

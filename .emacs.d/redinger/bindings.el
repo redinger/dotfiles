@@ -1,7 +1,5 @@
 (setq ns-function-modifier 'hyper) ; set Mac's Fn key to type Hyper
 
-(global-set-key (kbd "C-c C-j") 'nrepl-jack-in)
-
 (global-set-key (kbd "C-c f") 'find-file-in-project)
 
 (add-hook 'prog-mode-hook
@@ -27,7 +25,8 @@
 
 (global-set-key (kbd "C-c q") 'join-line)
 (global-set-key (kbd "C-c g") 'magit-status)
-
+(global-set-key (kbd "C-c C-h") 'inferior-lisp)
+(global-set-key (kbd "C-c C-j") 'cider-connect)
 
 (eval-after-load 'paredit
   ;; need a binding that works in the terminal
