@@ -1,0 +1,4 @@
+#!/bin/sh
+CP=$CP:/Users/redinger/bin:/Users/redinger/.m2/repository/cider/cider-nrepl/0.7.0/cider-nrepl-0.7.0.jar:/Users/redinger/.m2/repository/org/clojure/tools.nrepl/0.2.3/tools.nrepl-0.2.3.jar:/Users/redinger/.m2/repository/reply/reply/0.3.4/reply-0.3.4.jar
+java -server -Xms1g -Xmx1g -cp $CP: clojure.main -i "/Users/redinger/bin/my-repl.clj"
+rm .nrepl-port
